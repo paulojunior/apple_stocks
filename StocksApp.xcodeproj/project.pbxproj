@@ -14,6 +14,7 @@
 		2E9D86DA26C3083A00E96A89 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E9D86D926C3083A00E96A89 /* Preview Assets.xcassets */; };
 		2E9D86DD26C3083A00E96A89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E9D86DB26C3083A00E96A89 /* LaunchScreen.storyboard */; };
 		2E9D86E626C3094600E96A89 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9D86E526C3094600E96A89 /* WebServices.swift */; };
+		2E9D86F126C30C6100E96A89 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9D86F026C30C6100E96A89 /* Stock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		2E9D86DC26C3083A00E96A89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E9D86DE26C3083A00E96A89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E9D86E526C3094600E96A89 /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
+		2E9D86F026C30C6100E96A89 /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		2E9D86CF26C3083800E96A89 /* StocksApp */ = {
 			isa = PBXGroup;
 			children = (
+				2E9D86EF26C30C5600E96A89 /* Models */,
 				2E9D86E426C3093700E96A89 /* Services */,
 				2E9D86D026C3083800E96A89 /* AppDelegate.swift */,
 				2E9D86D226C3083800E96A89 /* SceneDelegate.swift */,
@@ -84,6 +87,14 @@
 				2E9D86E526C3094600E96A89 /* WebServices.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		2E9D86EF26C30C5600E96A89 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2E9D86F026C30C6100E96A89 /* Stock.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +171,7 @@
 				2E9D86D326C3083800E96A89 /* SceneDelegate.swift in Sources */,
 				2E9D86E626C3094600E96A89 /* WebServices.swift in Sources */,
 				2E9D86D526C3083800E96A89 /* ContentView.swift in Sources */,
+				2E9D86F126C30C6100E96A89 /* Stock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
