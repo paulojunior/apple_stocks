@@ -7,8 +7,23 @@
 
 import Foundation
 
-class StockListViewModel {
+class StockListViewModel: ObservableObject {
     
     var searchTerm: String = ""
-    var stocks: [StockViewModel] = [StockViewModel]()
+    @Published var stocks: [StockViewModel] = [StockViewModel]()
+    
+    func load() {
+        fetchStocks()
+    }
+    
+    private func fetchStocks() {
+        
+        WebService().getStocks { stocks in
+            if let stocks = stocks {
+                DispatchQueue.main.async {
+                    self.stocks = stocks.map(StockViewModel.init)
+                }
+            }
+        }
+    }
 }
