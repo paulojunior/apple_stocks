@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     
-    //@State private var searchTerm: String = ""
     @ObservedObject private var stockListVM = StockListViewModel()
     
     
