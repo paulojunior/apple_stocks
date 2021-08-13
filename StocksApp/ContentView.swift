@@ -44,6 +44,9 @@ struct ContentView: View {
                 
                 StockListView(stocks: filteredStocks)
                     .offset(y: 150)
+                
+                NewsArticleView(newsArticles: self.stockListVM.news)
+                    .offset(y: 500)
             }
             
             .navigationBarTitle("Stocks")

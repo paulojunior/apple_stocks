@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E2D4BCB26C6B54A00836FA2 /* NewsArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D4BCA26C6B54A00836FA2 /* NewsArticleViewModel.swift */; };
+		2E2D4BCD26C6D28600836FA2 /* NewsArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D4BCC26C6D28600836FA2 /* NewsArticleView.swift */; };
 		2E9D86D126C3083800E96A89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9D86D026C3083800E96A89 /* AppDelegate.swift */; };
 		2E9D86D326C3083800E96A89 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9D86D226C3083800E96A89 /* SceneDelegate.swift */; };
 		2E9D86D526C3083800E96A89 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9D86D426C3083800E96A89 /* ContentView.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		2E2D4BCA26C6B54A00836FA2 /* NewsArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticleViewModel.swift; sourceTree = "<group>"; };
+		2E2D4BCC26C6D28600836FA2 /* NewsArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticleView.swift; sourceTree = "<group>"; };
 		2E9D86CD26C3083800E96A89 /* StocksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StocksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9D86D026C3083800E96A89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E9D86D226C3083800E96A89 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			children = (
 				2E9D86F826C3126A00E96A89 /* SearchView.swift */,
 				2E9D86FA26C5775D00E96A89 /* StockListView.swift */,
+				2E2D4BCC26C6D28600836FA2 /* NewsArticleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				2E9D86FD26C57DF600E96A89 /* Article.swift in Sources */,
 				2E9D86F926C3126A00E96A89 /* SearchView.swift in Sources */,
 				2E9D86D526C3083800E96A89 /* ContentView.swift in Sources */,
+				2E2D4BCD26C6D28600836FA2 /* NewsArticleView.swift in Sources */,
 				2E9D86FB26C5775D00E96A89 /* StockListView.swift in Sources */,
 				2E9D86F126C30C6100E96A89 /* Stock.swift in Sources */,
 				2E9D86F626C30CC200E96A89 /* StockViewModel.swift in Sources */,
