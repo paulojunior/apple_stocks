@@ -11,25 +11,33 @@ import URLImage
 struct NewsArticleView: View {
     
     let newsArticles: [NewsArticleViewModel]
+    let onDragBegin: (DragGesture.Value) -> Void
+    let onDragEnd: (DragGesture.Value) -> Void
     
     var body: some View {
             
         let screenSize = UIScreen.main.bounds.size
         
         return VStack(alignment: .leading) {
-            VStack(alignment: .leading) {
-                Text("Top news")
-                    .foregroundColor(Color.white)
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .padding(2)
-                
-                Text("From news")
-                    .foregroundColor(Color.gray)
-                    .font(.body)
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                    padding(2)
-                
+            HStack {
+                VStack(alignment: .leading) {
+                    Text("Top news")
+                        .foregroundColor(Color.white)
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .padding(2)
+                    
+                    Text("From news")
+                        .foregroundColor(Color.gray)
+                        .font(.body)
+                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                        padding(2)
+                }
+                Spacer()
+            }.padding().contentShape(Rectangle())
+             .gesture(DragGesture()
+             .onChanged(self.onDragBegin)
+             .onEnded(self.onDragEnd))
                 
                 ScrollView {
                     VStack {
@@ -55,7 +63,7 @@ struct NewsArticleView: View {
                         }
                     }.frame(maxWidth: .infinity)
                 }
-            }
+            
         }.frame(width: screenSize.width, height: screenSize.height)
         .background(Color(red: 27/255, green: 28/255, blue: 30/255))
         .cornerRadius(20)
@@ -67,6 +75,6 @@ struct NewsArticleView_Previews: PreviewProvider {
         
         let article = Article(title: "News Title", imageUrl: "https://unafisconacional.org.br/wp-content/uploads/2020/09/Fake.jpg", publication: "The WallStreet Journal")
         
-       return NewsArticleView(newsArticles: [NewsArticleViewModel(article: article)])
+        return NewsArticleView(newsArticles: [NewsArticleViewModel(article: article)], onDragBegin: { _ in }, onDragEnd: { _ in })
     }
 }
