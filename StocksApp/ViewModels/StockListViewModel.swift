@@ -11,9 +11,19 @@ class StockListViewModel: ObservableObject {
     
     @Published var searchTerm: String = ""
     @Published var stocks: [StockViewModel] = [StockViewModel]()
+    @Published var news: [NewsArticleViewModel] = [NewsArticleViewModel]()
     
     func load() {
+        fetchNews()
         fetchStocks()
+    }
+    
+    private func fetchNews() {
+        WebService().getTopNews { news in
+            if let news = news {
+                self.news = news.map(NewsArticleViewModel.init)
+            }
+        }
     }
     
     private func fetchStocks() {
